@@ -20,7 +20,7 @@ class TestHeadHunterAPI(unittest.TestCase):
         self.assertEqual(vacancies[0]['salary'], '100 000-150 000 руб.')
         self.assertEqual(vacancies[0]['description'], 'Job description')
 
-    @patch('your_module.requests.get')
+    @patch('src.source.requests.get')
     def test_get_vacancies_failure(self, mock_get):
         mock_get.return_value.status_code = 404
 
